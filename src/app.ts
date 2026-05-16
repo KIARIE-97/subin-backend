@@ -7,7 +7,7 @@ import cors from "cors";
 
 dotenv.config();
 const app = express()
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 app.use(express.json())
 app.use(cors())
 
@@ -83,7 +83,7 @@ app.post("/api/generate-questions", async (req: Request , res: Response) => {
 });
 
 
-app.listen(port, () => {
+app.listen(Number(port), '0.0.0.0', () => {
     console.log("app listening on port", port)
 })
 
