@@ -15,9 +15,11 @@ const ai = new GoogleGenAI({
 	apiKey: process.env.GEMINI_API_KEY!,
 });
 
-app.get("/", () => {
-    console.log("hellllo subIn")
-})
+app.get("/", (req, res) => {
+	res.status(200).send("Backend is up and running smoothly!");
+	console.log("hellllo subIn")
+});
+
 
 app.post("/api/generate-questions", async (req: Request , res: Response) => {
     try {
