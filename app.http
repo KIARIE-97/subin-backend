@@ -1,0 +1,10 @@
+POST http://localhost:3000/api/generate-questions
+Content-Type: application/json
+
+{
+    "jobTitle": "softwareEngineer"
+}
+
+
+###
+GET http://localhost:3000/
